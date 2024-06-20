@@ -206,7 +206,9 @@ file://spark-image-pull-policy-all-pods.json
 You can verify the image pull policy that’s applied on the pods by describing the pod and looking at the image pull policy for each
 of the containers. Use the below kubectl commands to see the image pull policy of a specific container
 
+```
 # Get the image pull policy of all the containers in a specific pod (job submitter,
 # driver or executor) using the command
 kubectl get pods <pod-name> -n <namespace>
 -o jsonpath='{.spec.containers[*].imagePullPolicy}'
+```
