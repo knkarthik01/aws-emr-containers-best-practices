@@ -1,3 +1,9 @@
+## Techniques for Optimizing Image Pulls:
+As EMR Spark Image sizes continue to grow with newer releases (emr-7+), implementing image pull optimization techniques has become crucial. Failure to adopt these techniques can lead to incresaed job startup times (upto 50s), potentially impacting the performance of short-running Spark jobs. 
+
+To mitigate these challenges, it is essential to leverage the image pull optimization strategies. By implementing these techniques, customers can ensure that their Spark jobs start promptly, reducing the overall execution time and enhancing the overall performance of Spark jobs on EMR on EKS. Embracing image pull optimization not only improves job responsiveness but also contributes to a smoother and more efficient data processing experience.
+
+## Below are a couple options for optimizing Image Pull for your EMR on EKS Spark jobs:
 
 Below is the guide on how you can configure the image pull policy for the Spark and fluentd containers for the job submitter,
 driver and executor pods of your EMR on EKS job. The 3 allowed image pull policies are “Always”, “IfNotPresent” and “Never”. If
